@@ -55,81 +55,76 @@ const Navbar = () => {
   // }));
 
   return (
-    <div>
-      <AppBar position="static">
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            variant="h6"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            site
-          </Typography>
+    <AppBar position="sticky">
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          site
+        </Typography>
 
-          <ElectricCar sx={{ display: { xs: "block", sm: "none" } }} />
+        <ElectricCar sx={{ display: { xs: "block", sm: "none" } }} />
 
-          <Search>
-            <InputBase placeholder="search..." />
-          </Search>
+        <Search>
+          <InputBase placeholder="search..." />
+        </Search>
 
-          <Box
-            sx={{
-              display: { xs: "none", sm: "flex" },
-              gap: "20px",
-              alignItems: "center",
-            }}
-          >
-            <Badge badgeContent={4} color="error">
-              <Mail color="action" />
-            </Badge>
-
-            <Badge badgeContent={2} color="error">
-              <Notifications color="action" />
-            </Badge>
-
-            <Avatar
-              sx={{ width: "30px", height: "30px" }}
-              onClick={handleClick}
-              src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=240&w=320"
-            />
-          </Box>
-
-          <Box
-            sx={{
-              display: { xs: "flex", sm: "none" },
-              gap: "10px",
-              alignItems: "center",
-            }}
-          >
-            <Avatar
-              sx={{ width: "30px", height: "30px" }}
-              onClick={handleClick}
-              src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=240&w=320"
-            />
-            <Typography variant="span">Borys Johnsoniuk</Typography>
-          </Box>
-        </Toolbar>
-
-        <Menu
-          id="demo-positioned-menu"
-          aria-labelledby="demo-positioned-button"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            gap: "20px",
+            alignItems: "center",
           }}
         >
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>My account</MenuItem>
-          <MenuItem>Logout</MenuItem>
-        </Menu>
-      </AppBar>
-    </div>
+          <Badge badgeContent={4} color="error">
+            <Mail color="action" />
+          </Badge>
+
+          <Badge badgeContent={2} color="error">
+            <Notifications color="action" />
+          </Badge>
+
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            onClick={handleClick}
+            src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=240&w=320"
+          />
+        </Box>
+
+        <Box
+          sx={{
+            display: { xs: "flex", sm: "none" },
+            gap: "10px",
+            alignItems: "center",
+          }}
+        >
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            onClick={handleClick}
+            src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=240&w=320"
+          />
+          <Typography variant="span">Borys Johnsoniuk</Typography>
+        </Box>
+      </Toolbar>
+
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 35,
+          horizontal: -5,
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
+    </AppBar>
   );
 };
 
