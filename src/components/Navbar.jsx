@@ -58,7 +58,7 @@ const Navbar = () => {
     <AppBar position="sticky">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          site
+          Social network
         </Typography>
 
         <ElectricCar sx={{ display: { xs: "block", sm: "none" } }} />

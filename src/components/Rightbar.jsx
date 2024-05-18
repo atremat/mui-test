@@ -68,7 +68,7 @@ const itemData = [
 const Rightbar = () => {
   return (
     <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position="sticky" width={300}>
+      <Box sx={{ width: { sm: 120, md: 300 } }}>
         <Typography variant="h6" fontWeight={100}>
           Online friends
         </Typography>
