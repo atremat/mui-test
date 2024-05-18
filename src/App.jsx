@@ -9,6 +9,7 @@ import Rightbar from "./components/Rightbar";
 import Feed from "./components/Feed";
 import { Box, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
+import { Add } from "@mui/icons-material";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Feed />
         <Rightbar />
       </Stack>
+      <Add />
     </Box>
   );
 }
